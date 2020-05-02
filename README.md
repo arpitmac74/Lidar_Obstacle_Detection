@@ -1,6 +1,6 @@
-# Sensor Fusion Self-Driving Car Course
+# Lidar Obstacle Detection
 
-<img src="media/ObstacleDetectionFPS.gif" width="700" height="400" />
+<img src="media/Lidar.gif" width="700" height="400" />
 
 ### Welcome to the Sensor Fusion course for self-driving cars.
 
@@ -28,31 +28,6 @@ $> make
 $> ./environment
 ```
 
-### Windows 
-
-http://www.pointclouds.org/downloads/windows.html
-
-### MAC
-
-#### Install via Homebrew
-1. install [homebrew](https://brew.sh/)
-2. update homebrew 
-	```bash
-	$> brew update
-	```
-3. add  homebrew science [tap](https://docs.brew.sh/Taps) 
-	```bash
-	$> brew tap brewsci/science
-	```
-4. view pcl install options
-	```bash
-	$> brew options pcl
-	```
-5. install PCL 
-	```bash
-	$> brew install pcl
-	```
-
 #### Prebuilt Binaries via Universal Installer
 http://www.pointclouds.org/downloads/macosx.html  
 NOTE: very old version 
@@ -62,4 +37,3 @@ NOTE: very old version
 [PCL Source Github](https://github.com/PointCloudLibrary/pcl)
 
 [PCL Mac Compilation Docs](http://www.pointclouds.org/documentation/tutorials/compiling_pcl_macosx.php)
-# Lidar_Obstacle_Detection

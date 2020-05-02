@@ -89,11 +89,11 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
   //ProcessPointClouds<pcl::PointXYZI> pointProcessorI;
   //pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloud = pointProcessorI.loadPcd("../src/sensors/data/pcd/data_1/0000000000.pcd");
   renderPointCloud(viewer,inputCloud,"inputCloud");
-  pcl::PointCloud<pcl::PointXYZI>::Ptr filter_cloud = pointProcessorI.FilterCloud(inputCloud,0.3,Eigen::Vector4f (-20, -6, -3, 1), Eigen::Vector4f ( 30, 7, 2, 1));
+  pcl::PointCloud<pcl::PointXYZI>::Ptr filter_cloud = pointProcessorI.FilterCloud(inputCloud,0.4,Eigen::Vector4f (-20, -6, -3, 1), Eigen::Vector4f ( 30, 7, 2, 1));
   //renderPointCloud(viewer,filter_cloud,"filter_cloud");
   auto segmentCloud = pointProcessorI.SegmentPlane(filter_cloud,100,0.2);
   //renderPointCloud(viewer,segmentCloud.second,"planeCloud",Color(0,1,0));
-  std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessorI.Clustering(segmentCloud.first, 0.7, 10, 1000);
+  std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessorI.Clustering(segmentCloud.first, 0.7, 10, 26);
 
   int clusterId = 0;
   std::vector<Color> colors = {Color(1,0,0), Color(1,1,0), Color(0,0,1)};
@@ -143,7 +143,7 @@ int main (int argc, char** argv)
 
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("3D Viewer"));
     ProcessPointClouds<pcl::PointXYZI> pointProcessorI;
-    std::vector<boost::filesystem::path> stream = pointProcessorI.streamPcd("../src/sensors/data/pcd/data_1");
+    std::vector<boost::filesystem::path> stream = pointProcessorI.streamPcd("../src/sensors/data/pcd/data_2");
     auto streamIterator = stream.begin();
     pcl::PointCloud<pcl::PointXYZI>::Ptr inputCloudI;
 

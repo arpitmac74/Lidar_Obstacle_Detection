@@ -37,4 +37,3 @@ NOTE: very old version
 [PCL Source Github](https://github.com/PointCloudLibrary/pcl)
 
 [PCL Mac Compilation Docs](http://www.pointclouds.org/documentation/tutorials/compiling_pcl_macosx.php)
-# Lidar_Obstacle_Detection

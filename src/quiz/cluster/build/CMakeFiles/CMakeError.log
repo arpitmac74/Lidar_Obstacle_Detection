@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8a03a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8a03a.dir/build.make CMakeFiles/cmTC_8a03a.dir/build
+make[1]: Entering directory '/home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8a03a.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_8a03a.dir/CheckSymbolExists.c.o   -c /home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8a03a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a03a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8a03a.dir/CheckSymbolExists.c.o  -o cmTC_8a03a 
+CMakeFiles/cmTC_8a03a.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8a03a.dir/build.make:97: recipe for target 'cmTC_8a03a' failed
+make[1]: *** [cmTC_8a03a] Error 1
+make[1]: Leaving directory '/home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8a03a/fast' failed
+make: *** [cmTC_8a03a/fast] Error 2
+
+File /home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8abcb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8abcb.dir/build.make CMakeFiles/cmTC_8abcb.dir/build
+make[1]: Entering directory '/home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8abcb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_8abcb.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8abcb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8abcb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_8abcb.dir/CheckFunctionExists.c.o  -o cmTC_8abcb -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8abcb.dir/build.make:97: recipe for target 'cmTC_8abcb' failed
+make[1]: *** [cmTC_8abcb] Error 1
+make[1]: Leaving directory '/home/oshi/SLAM/Sensor_Fusion/SFND_Lidar_Obstacle_Detection/src/quiz/cluster/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8abcb/fast' failed
+make: *** [cmTC_8abcb/fast] Error 2
+
+
